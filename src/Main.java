@@ -14,10 +14,12 @@ public class Main {
         //s.setR(60);
         //s.getR();
 
-        ((Circle)s).setR(60);
-        System.out.println(((Circle)s).getR());
-        System.out.println();
-        s.draw();
+        if(s instanceof Circle){
+            ((Circle) s).setR(60);
+            System.out.println(((Circle) s).getR());
+            System.out.println();
+            s.draw();
+        }
 
         //this type casting will fail, as Shape s is referring to Circle and not to a rect
         /*((Rect)s).setW(400);
